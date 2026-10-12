@@ -74,7 +74,7 @@ export const CONFIG = Object.freeze({
   ]),
 
   // ----- Health -----
-  STARTING_LIVES: 3,
+  STARTING_LIVES: 5,
   INVULNERABILITY_DURATION: 1, // seconds
 
   // ----- Physics (pixels per second) -----
