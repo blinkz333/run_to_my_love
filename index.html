@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <meta name="theme-color" content="#1e0710" />
+  <!-- Full screen when added to the home screen -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Run to My Love</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-container">
+    <div id="game-wrapper">
+      <canvas id="game-canvas" aria-label="Run to My Love game"></canvas>
+    </div>
+  </main>
+
+  <!-- Shown only on phones held upright (see style.css) -->
+  <div id="rotate-hint" aria-live="polite">
+    <div class="rotate-phone"></div>
+    <p>Turn your phone sideways to play</p>
+  </div>
+
+  <noscript>Please enable JavaScript to play Run to My Love.</noscript>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
