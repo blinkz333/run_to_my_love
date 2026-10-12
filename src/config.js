@@ -42,6 +42,7 @@ const TARGET_SCORE = daysBetween(RELATIONSHIP_START_DATE, WEDDING_DAY);
 export const CONFIG = Object.freeze({
   // ----- Story / Text -----
   GAME_TITLE: "Run to My Love",
+  CREDIT: "Made by Blink",
   // {years} and {days} are counted from RELATIONSHIP_START_DATE to WEDDING_DAY
   GAME_SUBTITLE: "{years} Years, {days} Days, One Love.",
   RELATIONSHIP_START_DATE,

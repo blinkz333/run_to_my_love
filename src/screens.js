@@ -263,6 +263,8 @@ export class Screens {
     r.text(subtitle, view.width / 2, 98, 8, COLORS.GOLD_LIGHT);
     r.text(CONFIG.ENDING_MESSAGE, view.width / 2, 114, 8, COLORS.TEXT);
 
+    r.drawCredit(time);
+
     if (canRestart) {
       this.drawPrompt(
         IS_TOUCH_DEVICE ? "TAP to play again" : "TAP or SPACE to play again",

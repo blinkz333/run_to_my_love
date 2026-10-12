@@ -667,6 +667,19 @@ export class Renderer {
     this.drawShape(HEART_SHAPE, x, y, color);
   }
 
+  // "Made by Blink" + blinking heart on a dark badge, bottom-right of the centered area
+  drawCredit(time) {
+    this.setFont(7);
+    const textW = Math.ceil(this.ctx.measureText(CONFIG.CREDIT).width);
+    const w = textW + 26;
+    const x = view.offsetX + CONFIG.CANVAS_WIDTH - w - 6;
+    const y = H - 22;
+    this.pixelBox(x, y, w, 16, "rgba(61, 12, 25, 0.85)", COLORS.GOLD);
+    this.text(CONFIG.CREDIT, x + 6 + textW / 2, y + 8, 7, COLORS.GOLD_LIGHT);
+    if (Math.sin(time * 5) > 0)
+      this.drawPixelHeart(x + 10 + textW, y + 4, COLORS.PETAL);
+  }
+
   // Draws a small pixel map where 'x' = filled pixel (scale = size of each pixel)
   drawShape(shape, x, y, color, scale = 1) {
     this.ctx.fillStyle = color;
@@ -777,6 +790,8 @@ export class Renderer {
       );
       this.text("SLIDE: ARROW DOWN", cx, 205, 8, COLORS.GOLD_LIGHT);
     }
+
+    this.drawCredit(time);
   }
 
   // ---------- Sound button ----------
